@@ -1,6 +1,6 @@
 # Credit Card Fraud Detection
 
-This project aims to build and evaluate models to detect fraudulent credit card transactions. We use a dataset containing information about credit card transactions and experiment with various machine learning algorithms like Logistic Regression, Decision Trees, and Random Forests to classify transactions as fraudulent or legitimate.
+This project aims to build and evaluate models to detect fraudulent credit card transactions. We use a dataset containing information about credit card transactions and experiment with various machine learning algorithms like Logistic Regression, Decision Trees and Random Forests to classify transactions as fraudulent or legitimate.
 
 ## Dataset
 
@@ -15,7 +15,7 @@ The dataset used in this project contains credit card transactions with the foll
 
 The project is structured as follows:
 
-- `credit_card.xlsx`: The dataset file containing credit card transactions.
+- `creditcard.xlsx`: The dataset file containing credit card transactions.
 - `fraud_detection.py`: The main script to preprocess the data, train models, and evaluate their performance.
 - `README.md`: This file, providing an overview and instructions for the project.
 
