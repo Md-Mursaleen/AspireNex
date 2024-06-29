@@ -10,14 +10,14 @@ url = 'https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud/download?datasetV
 df = pd.read_csv(r'c:\Users\md mursaleen\Downloads\creditcard.csv')
 
 # Explore the dataset
-# print(df.head())
-# print(df.tail())
-# print(df.info())
-# print(df.describe())
+print(df.head())
+print(df.tail())
+print(df.info())
+print(df.describe())
 df['Class'].value_counts()
 
 # Check for missing values
-# print(df.isnull().sum())
+print(df.isnull().sum())
 
 # Normalize the 'Time' and 'Amount' features
 scaler = StandardScaler()
