@@ -15,7 +15,6 @@ print(df.head())
 print(df.tail())
 print(df.info())
 print(df.describe())
-df['Class'].value_counts()
 
 # Check for missing values
 print(df.isnull().sum())
