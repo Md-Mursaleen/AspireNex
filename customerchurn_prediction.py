@@ -17,10 +17,10 @@ df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors='coerce')
 df['TotalCharges'].fillna(df['TotalCharges'].mean(), inplace=True)
 
 # Explore the dataset
-# print(df.head())
-# print(df.tail())
-# print(df.info())
-# print(df.describe())
+print(df.head())
+print(df.tail())
+print(df.info())
+print(df.describe())
 
 # Encode categorical variables using One-Hot Encoding
 categorical_cols = ['gender', 'Partner', 'Dependents', 'PhoneService', 'MultipleLines', 
