@@ -20,16 +20,16 @@ test_data = pd.read_csv('testdata.csv')
 test_data_solution = pd.read_csv('testdata_solution.csv')
 
 # Explore the dataset
-# print(train_data.head())
-# print(test_data.head())
-# print(train_data.info())
-# print(test_data.info())
-# print(train_data.describe())
-# print(test_data.describe())
+print(train_data.head())
+print(test_data.head())
+print(train_data.info())
+print(test_data.info())
+print(train_data.describe())
+print(test_data.describe())
 
 # Check for missing values
-# print(train_data.isnull().sum())
-# print(test_data.isnull().sum())
+print(train_data.isnull().sum())
+print(test_data.isnull().sum())
 
 # Vectorize the text data
 tfidf_vectorizer = TfidfVectorizer(stop_words='english')
