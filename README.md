@@ -4,12 +4,27 @@ This project aims to detect credit card fraud using various machine learning mod
 
 ## Dataset
 
-The dataset can be downloaded from Kaggle(https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud). It contains 284,807 transactions, of which 492 are fraudulent (Class = 1) and the rest are non-fraudulent (Class = 0). The dataset includes 30 features: 
+The dataset can be downloaded from [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud). It contains 284,807 transactions, of which 492 are fraudulent (Class = 1) and the rest are non-fraudulent (Class = 0). The dataset includes 30 features: 
 
 - 28 anonymized numerical features (V1 to V28)
 - 'Time' which is the seconds elapsed between this transaction and the first transaction in the dataset
 - 'Amount' which is the transaction amount
 - 'Class' which is the target variable (0 for non-fraudulent, 1 for fraudulent)
+
+## Prerequisites
+
+To run the code, you need to have the following libraries installed:
+
+- pandas
+- numpy
+- scikit-learn
+- matplotlib
+- seaborn
+
+You can install the required libraries using pip:
+
+```sh
+pip install pandas numpy scikit-learn matplotlib seaborn
 
 ## Project Structure
 
