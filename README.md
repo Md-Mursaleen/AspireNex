@@ -63,13 +63,16 @@ The script prints the evaluation results for each model and plots the feature im
     ```sh
         git clone https://github.com/yourusername/credit-card-fraud-detection.git
         cd credit-card-fraud-detection
+    ```
 
     Install dependencies:
     
     ```sh
         pip install pandas scikit-learn
+    ```
 
     Run the script:
     
     ```sh
         python fraud_detection.py
+    ```
