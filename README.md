@@ -31,14 +31,9 @@ pip install pandas numpy scikit-learn matplotlib seaborn
 
 The project is structured as follows:
 
-- `creditcard.xlsx`: The dataset file containing credit card transactions.
-- `fraud_detection.py`: The main script to preprocess the data, train models, and evaluate their performance.
-- `README.md`: This file, providing an overview and instructions for the project.
-
-## Preprocessing
-
-1. **Normalization**: The `Time` and `Amount` features are normalized using `StandardScaler`.
-2. **Splitting Data**: The dataset is split into training and testing sets using an 80-20 split ratio, with stratification to maintain class balance.
+- **creditcard.xlsx**: The dataset file containing credit card transactions.
+- **fraud_detection.py**: The main script to preprocess the data, train models, and evaluate their performance.
+- **README.md**: This file, providing an overview and instructions for the project.
 
 ## Models
 
