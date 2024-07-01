@@ -25,6 +25,7 @@ You can install the required libraries using pip:
 
 ```sh
 pip install pandas numpy scikit-learn matplotlib seaborn
+```
 
 ## Project Structure
 
