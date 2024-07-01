@@ -25,36 +25,9 @@ To run the code, you need to have the following libraries installed:
 
 The project is structured as follows:
 
-- **creditcard.csv**: The dataset file containing credit card transactions.
-- **fraud_detection.py**: The main script to preprocess the data, train models, and evaluate their performance.
-- **README.md**: This file, providing an overview and instructions for the project.
-
-## Usage
-
-1. **Download the Dataset**: Ensure you have downloaded the dataset from Kaggle and placed it in the appropriate directory (`c:\Users\md mursaleen\Downloads\creditcard.csv` or update the `file_path` variable in the script with the correct path).
-
-2. **Install Required Libraries**: Install the necessary Python libraries using pip:
-
-   ```sh
-   pip install pandas numpy scikit-learn matplotlib seaborn
-
-3. **To run the project, follow these steps**:
-
-1. **Clone the repository**:
-    ```sh
-    git clone https://github.com/yourusername/credit-card-fraud-detection.git
-    cd credit-card-fraud-detection
-    ```
-
-2. **Install dependencies**:
-    ```sh
-    pip install pandas scikit-learn
-    ```
-
-3. **Run the script**:
-    ```sh
-    python fraud_detection.py
-    ```   
+- `creditcard.csv`: The dataset file containing credit card transactions.
+- `fraud_detection.py`: The main script to preprocess the data, train models, and evaluate their performance.
+- `README.md`: This file, providing an overview and instructions for the project.
 
 ## Models
 
@@ -76,4 +49,27 @@ The script prints the evaluation results for each model and plots the feature im
 
 ## Usage
 
+1. **Download the Dataset**: Ensure you have downloaded the dataset from Kaggle and placed it in the appropriate directory (`c:\Users\md mursaleen\Downloads\creditcard.csv` or update the `file_path` variable in the script with the correct path).
 
+2. **Install Required Libraries**: Install the necessary Python libraries using pip:
+
+   ```sh
+   pip install pandas numpy scikit-learn matplotlib seaborn
+
+3. **To run the project, follow these steps**:
+
+    Clone the repository:
+        ```sh
+        git clone https://github.com/yourusername/credit-card-fraud-detection.git
+        cd credit-card-fraud-detection
+        ```
+
+    Install dependencies:
+        ```sh
+        pip install pandas scikit-learn
+        ```
+
+    Run the script:
+        ```sh
+        python fraud_detection.py
+        ``` 
