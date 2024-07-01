@@ -38,6 +38,24 @@ The project is structured as follows:
    ```sh
    pip install pandas numpy scikit-learn matplotlib seaborn
 
+3. **To run the project, follow these steps**:
+
+1. **Clone the repository**:
+    ```sh
+    git clone https://github.com/yourusername/credit-card-fraud-detection.git
+    cd credit-card-fraud-detection
+    ```
+
+2. **Install dependencies**:
+    ```sh
+    pip install pandas scikit-learn
+    ```
+
+3. **Run the script**:
+    ```sh
+    python fraud_detection.py
+    ```   
+
 ## Models
 
 Three machine learning models are trained and evaluated:
@@ -58,20 +76,4 @@ The script prints the evaluation results for each model and plots the feature im
 
 ## Usage
 
-To run the project, follow these steps:
 
-1. **Clone the repository**:
-    ```sh
-    git clone https://github.com/yourusername/credit-card-fraud-detection.git
-    cd credit-card-fraud-detection
-    ```
-
-2. **Install dependencies**:
-    ```sh
-    pip install pandas scikit-learn
-    ```
-
-3. **Run the script**:
-    ```sh
-    python fraud_detection.py
-    ```
