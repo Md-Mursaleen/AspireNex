@@ -14,13 +14,13 @@ url = 'https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud/download?datasetV
 df = pd.read_csv(r'c:\Users\md mursaleen\Downloads\creditcard.csv')
 
 # Explore the dataset
-print(df.head())
-print(df.tail())
-print(df.info())
-print(df.describe())
+# print(df.head())
+# print(df.tail())
+# print(df.info())
+# print(df.describe())
 
 # Check for missing values
-print(df.isnull().sum())
+# print(df.isnull().sum())
 
 # Define features and target variable
 X = df.drop(columns=['Class'])

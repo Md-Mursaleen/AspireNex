@@ -1,11 +1,13 @@
 import pandas as pd
-from sklearn.preprocessing import StandardScaler
+import numpy as np
+from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from xgboost import XGBClassifier
-from sklearn.model_selection import GridSearchCV
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
+from sklearn.model_selection import GridSearchCV, train_test_split
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, roc_curve,auc
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 # Load the dataset
 df = pd.read_csv(r'c:\Users\md mursaleen\Downloads\telco-customer-churn.csv')
@@ -40,8 +42,6 @@ X = df.drop(['Churn', 'customerID'], axis=1)
 y = df['Churn'].apply(lambda x: 1 if x == 'Yes' else 0)
 
 # Split into training and test sets
-from sklearn.model_selection import train_test_split
-
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Train a Logistic Regression model
@@ -69,30 +69,47 @@ best_model = grid_search.best_estimator_
 
 # Logistic Regression Evaluation
 y_pred_lr = lr.predict(X_test)
+y_proba_lr = lr.predict_proba(X_test)[:, 1]
 print('Logistic Regression:')
 print('Accuracy:', accuracy_score(y_test, y_pred_lr))
-print('Precision:', precision_score(y_test, y_pred_lr))
-print('Recall:', recall_score(y_test, y_pred_lr))
-print('F1 Score:', f1_score(y_test, y_pred_lr))
-print('AUC-ROC:', roc_auc_score(y_test, y_pred_lr))
+print('Classification Report:\n', classification_report(y_test, y_pred_lr))
 
 # Random Forest Evaluation
 y_pred_rf = rf.predict(X_test)
+y_proba_rf = rf.predict_proba(X_test)[:, 1]
 print('\nRandom Forest:')
 print('Accuracy:', accuracy_score(y_test, y_pred_rf))
-print('Precision:', precision_score(y_test, y_pred_rf))
-print('Recall:', recall_score(y_test, y_pred_rf))
-print('F1 Score:', f1_score(y_test, y_pred_rf))
-print('AUC-ROC:', roc_auc_score(y_test, y_pred_rf))
+print('Classification Report:\n', classification_report(y_test, y_pred_rf))
 
 # Gradient Boosting Evaluation
 y_pred_xgb = best_model.predict(X_test)
+y_proba_xgb = best_model.predict_proba(X_test)[:, 1]
 print('\nGradient Boosting:')
 print('Accuracy:', accuracy_score(y_test, y_pred_xgb))
-print('Precision:', precision_score(y_test, y_pred_xgb))
-print('Recall:', recall_score(y_test, y_pred_xgb))
-print('F1 Score:', f1_score(y_test, y_pred_xgb))
-print('AUC-ROC:', roc_auc_score(y_test, y_pred_xgb))
+print('Classification Report:\n', classification_report(y_test, y_pred_xgb))
+
+# Plot ROC Curves
+plt.figure(figsize=(10, 6))
+for model_name, y_proba in [('Logistic Regression', y_proba_lr), ('Random Forest', y_proba_rf), ('Gradient Boosting', y_proba_xgb)]:
+    fpr, tpr, _ = roc_curve(y_test, y_proba)
+    plt.plot(fpr, tpr, label=f'{model_name} (AUC = {auc(fpr, tpr):.2f})')
+plt.plot([0, 1], [0, 1], 'k--')
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('Receiver Operating Characteristic (ROC) Curve')
+plt.legend(loc='lower right')
+plt.show()
+
+# Confusion Matrix
+cm = confusion_matrix(y_test, y_pred_xgb)
+plt.figure(figsize=(8, 6))
+sns.heatmap(cm, annot=True, fmt='d', cmap='Blues')
+plt.xlabel('Predicted')
+plt.ylabel('Actual')
+plt.title('Confusion Matrix')
+plt.show()
 
 # Feature Importance
 feature_importances = best_model.feature_importances_
