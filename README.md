@@ -80,6 +80,6 @@ The script prints the evaluation results for each model and plots the feature im
 ## Output
 
 ![Screenshot1](output1.png)
-![Screenshot2](assets/screenshot2.jpeg)
+![Screenshot2](output2.png)
 ![Screenshot3](assets/screenshot3.jpeg)
 ![Screenshot4](assets/screenshot4.jpeg)
