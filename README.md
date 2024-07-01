@@ -4,7 +4,7 @@ This project aims to detect credit card fraud using various machine learning mod
 
 ## Dataset
 
-The dataset can be downloaded from [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud). It contains 284,807 transactions, of which 492 are fraudulent (Class = 1) and the rest are non-fraudulent (Class = 0). The dataset includes 30 features: 
+The dataset can be downloaded from [`Kaggle`](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud). It contains 284,807 transactions, of which 492 are fraudulent (Class = 1) and the rest are non-fraudulent (Class = 0). The dataset includes 30 features: 
 
 - 28 anonymized numerical features (V1 to V28)
 - 'Time' which is the seconds elapsed between this transaction and the first transaction in the dataset
@@ -21,19 +21,22 @@ To run the code, you need to have the following libraries installed:
 - matplotlib
 - seaborn
 
-You can install the required libraries using pip:
-
-```sh
-pip install pandas numpy scikit-learn matplotlib seaborn
-```
-
 ## Project Structure
 
 The project is structured as follows:
 
-- **creditcard.xlsx**: The dataset file containing credit card transactions.
+- **creditcard.csv**: The dataset file containing credit card transactions.
 - **fraud_detection.py**: The main script to preprocess the data, train models, and evaluate their performance.
 - **README.md**: This file, providing an overview and instructions for the project.
+
+## Usage
+
+1. **Download the Dataset**: Ensure you have downloaded the dataset from Kaggle and placed it in the appropriate directory (`c:\Users\md mursaleen\Downloads\creditcard.csv` or update the `file_path` variable in the script with the correct path).
+
+2. **Install Required Libraries**: Install the necessary Python libraries using pip:
+
+   ```sh
+   pip install pandas numpy scikit-learn matplotlib seaborn
 
 ## Models
 
@@ -51,7 +54,7 @@ The models are evaluated using the following metrics:
 - Confusion Matrix
 - Classification Report (Precision, Recall, F1-Score)
 
-The best model is determined based on the highest accuracy score and is further evaluated on the test dataset.
+The script prints the evaluation results for each model and plots the feature importance determined by the Random Forest model.
 
 ## Usage
 
