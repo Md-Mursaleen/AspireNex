@@ -1,15 +1,15 @@
 # Credit Card Fraud Detection
 
-This project aims to build and evaluate models to detect fraudulent credit card transactions. We use a dataset containing information about credit card transactions and experiment with various machine learning algorithms like Logistic Regression, Decision Trees and Random Forests to classify transactions as fraudulent or legitimate.
+This project aims to detect credit card fraud using various machine learning models, including Logistic Regression, Decision Tree, and Random Forest. The models are trained and evaluated on a dataset containing transactions made by credit cards in September 2013 by European cardholders. The dataset is highly unbalanced, containing many more non-fraudulent transactions than fraudulent ones.
 
 ## Dataset
 
-The dataset used in this project contains credit card transactions with the following features:
+The dataset can be downloaded from [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud). It contains 284,807 transactions, of which 492 are fraudulent (Class = 1) and the rest are non-fraudulent (Class = 0). The dataset includes 30 features: 
 
-- `Time`: Number of seconds elapsed between this transaction and the first transaction in the dataset.
-- `V1` to `V28`: Principal Component Analysis (PCA) components of the original features to protect confidentiality.
-- `Amount`: Transaction amount.
-- `Class`: Class label (1 for fraudulent transactions, 0 for legitimate transactions).
+- 28 anonymized numerical features (V1 to V28)
+- 'Time' which is the seconds elapsed between this transaction and the first transaction in the dataset
+- 'Amount' which is the transaction amount
+- 'Class' which is the target variable (0 for non-fraudulent, 1 for fraudulent)
 
 ## Project Structure
 
