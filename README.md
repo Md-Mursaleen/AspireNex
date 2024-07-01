@@ -49,7 +49,7 @@ The script prints the evaluation results for each model and plots the feature im
 
 ## Usage
 
-1. **Download the Dataset**: Ensure you have downloaded the dataset from Kaggle and placed it in the appropriate directory (`c:\Users\md mursaleen\Downloads\creditcard.csv` or update the `file_path` variable in the script with the correct path).
+1. **Download the Dataset**: Ensure you have downloaded the dataset from Kaggle and placed it in the appropriate directory (`c:\Users\md mursaleen\Downloads\creditcard.csv`).
 
 2. **Install Required Libraries**: Install the necessary Python libraries using pip:
 
@@ -76,3 +76,10 @@ The script prints the evaluation results for each model and plots the feature im
     ```sh
         python fraud_detection.py
     ```
+    
+## Output
+
+![Screenshot1](assets/screenshot1.jpeg)
+![Screenshot2](assets/screenshot2.jpeg)
+![Screenshot3](assets/screenshot3.jpeg)
+![Screenshot4](assets/screenshot4.jpeg)
