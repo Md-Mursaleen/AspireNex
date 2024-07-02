@@ -10,17 +10,16 @@ from sklearn.metrics import classification_report, confusion_matrix, accuracy_sc
 import matplotlib.pyplot as plt
 
 # Load the dataset
-url = 'https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud/download?datasetVersionNumber=3'
 df = pd.read_csv(r'c:\Users\md mursaleen\Downloads\creditcard.csv')
 
 # Explore the dataset
-# print(df.head())
-# print(df.tail())
-# print(df.info())
-# print(df.describe())
+print(df.head())
+print(df.tail())
+print(df.info())
+print(df.describe())
 
 # Check for missing values
-# print(df.isnull().sum())
+print(df.isnull().sum())
 
 # Define features and target variable
 X = df.drop(columns=['Class'])
