@@ -61,8 +61,7 @@ The script prints the evaluation results for each model and plots the feature im
     Clone the repository:
    
     ```sh
-        git clone https://github.com/yourusername/credit-card-fraud-detection.git
-        cd credit-card-fraud-detection
+        git clone https://github.com/Md-Mursaleen/CreditCard-Fraud-Detection.git
     ```
 
     Install dependencies:
