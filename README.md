@@ -1,6 +1,6 @@
 # Credit Card Fraud Detection
 
-This project aims to detect credit card fraud using various machine learning models, including Logistic Regression, Decision Tree and Random Forest. The models are trained and evaluated on a dataset containing transactions made by credit cards. The dataset is highly unbalanced, containing many more non-fraudulent transactions than fraudulent ones.
+This project aims to detect credit card fraud using various machine learning models, including Logistic Regression, Decision Tree and Random Forest. The models are trained and evaluated on a dataset containing transactions made by credit cards.
 
 ## Dataset
 
